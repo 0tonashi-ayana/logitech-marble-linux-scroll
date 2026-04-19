@@ -1,0 +1,11 @@
+[Unit]
+Description=Marble Mouse scroll emulation
+After=systemd-udev-settle.service
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/marble-scroll/marble-scroll.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
